@@ -1,0 +1,4 @@
+# Ignore List of Files
+
+*.class
+*.swap
