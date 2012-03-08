@@ -41,7 +41,7 @@ public class PrimitiveGUI extends JFrame
 	 
 	 public final void addMainScreen() throws IOException
 	 {
-	        setTitle("Nomis");
+		 setTitle("Nomis");
 	        setSize(new Dimension(450, 600));
 	        setLocationRelativeTo(null);
 	        setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -54,7 +54,7 @@ public class PrimitiveGUI extends JFrame
 	    	JPanel top = new JPanel(new BorderLayout(0, 0));//Top panel definition
 	    	top.setMaximumSize(new Dimension(450, 0));
 	    	top.setBackground(Color.gray);
-	    	JLabel title = new JLabel("Welcome to Nomis, good luck and have fun!");//Title on top panel
+	    	JLabel title = new JLabel("Welcome to Nomis!");//Title on top panel
 	    	title.setFont(new Font("Orator Std", Font.BOLD,20));
 	    	title.setForeground(Color.white);
 	    	title.setBorder(BorderFactory.createEmptyBorder(0, 12, 0,0));
@@ -68,7 +68,7 @@ public class PrimitiveGUI extends JFrame
 	        mainPanel.add(top);//Activate top panel
 	        
 	        JPanel mid = new JPanel(new BorderLayout());//Mid panel definition, insert picture here
-	        BufferedImage nomisSplash = ImageIO.read(new File("C:/Users/³ÂÆäÁÁ/Desktop/splash1.png")); //Edit image path first
+	        BufferedImage nomisSplash = ImageIO.read(new File("D:/Documents/My Java/Nomis/src/splash1.png")); //Edit image path first
 	        JLabel picLabel = new JLabel(new ImageIcon(nomisSplash));
 	        mid.add(picLabel);
 	        mainPanel.add(mid);
@@ -78,6 +78,12 @@ public class PrimitiveGUI extends JFrame
 	        JButton play = new JButton("Start Game");
 	        JButton options = new JButton("Options");
 	        JButton about = new JButton("About");
+	        about.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent event) {
+	        		AboutDialog ad = new AboutDialog();
+                    ad.setVisible(true);
+	        	}
+	        });
 	        JButton exit = new JButton("Exit");
 	        exit.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent event) {
@@ -119,15 +125,15 @@ public class PrimitiveGUI extends JFrame
 	     JMenu about = new JMenu("About");
 	     JMenu pause = new JMenu("Pause");
 	     
-	     JMenuItem mExit = new JMenuItem("Exit(Why don't you just click on the exit bar ...)");//, icon); //Set menu item "exit"
+	     JMenuItem mExit = new JMenuItem("Exit");//, icon); //Set menu item "exit"
 	     mExit.setToolTipText("Exit program");
 	     mExit.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent event) {
 	                System.exit(0);
 	            }
 	        });
-	     JMenuItem vEasy = new JMenuItem("VEEEEEEEEEEEEEEERY Easy(coming soon...)");
-	     vEasy.setToolTipText("Start a new game at VEEEEEEEEEEERY easy difficulty which means not available.");
+	     JMenuItem vEasy = new JMenuItem("Very Easy");
+	     vEasy.setToolTipText("Start a new game at very easy difficulty.");
 	     vEasy.addActionListener(new ActionListener() {
 	    	 public void actionPerformed(ActionEvent event) {
 	    		 //Insert action here
@@ -157,8 +163,8 @@ public class PrimitiveGUI extends JFrame
 	    		 //Insert action here
 	    	 }
 	     });
-	     JMenuItem hell = new JMenuItem("HELL MODE(designed for demons)");
-	     hell.setToolTipText("Start a new game at HELL, play if you wanna go hell.");
+	     JMenuItem hell = new JMenuItem("Hell");
+	     hell.setToolTipText("Start a new game at Hell difficulty, play if you want to go to hell.");
 	     hell.addActionListener(new ActionListener() {
 	    	 public void actionPerformed(ActionEvent event) {
 	    		 //Insert action here
@@ -205,9 +211,7 @@ public class PrimitiveGUI extends JFrame
 	     file.add(mExit); //Define what the item is
 	     
 	     setJMenuBar(menubar); //Activate menubar
-	     
-	     
-		 
+	    
 	 }
 	 
 	 public final void addStatusBar()
@@ -215,7 +219,7 @@ public class PrimitiveGUI extends JFrame
 		 JLabel statusbar = new JLabel();
 	     statusbar.setPreferredSize(new Dimension(-1, 22));
 	     statusbar.setBorder(LineBorder.createGrayLineBorder());
-	     statusbar.setText("Why we have something here...A useless addStatusBar?..");
+	     statusbar.setText("Add status text");
 	     add(statusbar, BorderLayout.SOUTH);
 	 }
 	 
