@@ -34,7 +34,7 @@ public enum SoundEffect {
     	 
     	  //TODO what i am doing here is using the exact same thing you wrote in AudioPlayer.
     	  
-         File url =  new File("music/" + soundFileName);
+         File url =  new File("resources/music/" + soundFileName);
          // Set up an audio input stream piped from the sound file.
          AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(url);
          // Get a clip resource.

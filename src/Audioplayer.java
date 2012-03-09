@@ -20,7 +20,7 @@ public class Audioplayer extends JFrame {
       try {
          // Open an audio input stream.
     	  //File soundFile = new File("C:/Users/Victor Ng/workspace/Inf-1 OOP project/Music/85046_newgrounds_parago.wav");
-    	  File soundFile = new File("music/scifi002.wav");
+    	  File soundFile = new File("resources/music/scifi002.wav");
     	  
     	  AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
          // Get a sound clip resource.

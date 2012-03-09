@@ -68,7 +68,7 @@ public class PrimitiveGUI extends JFrame
 	        mainPanel.add(top);//Activate top panel
 	        
 	        JPanel mid = new JPanel(new BorderLayout());//Mid panel definition, insert picture here
-	        BufferedImage nomisSplash = ImageIO.read(new File("D:/Documents/My Java/Nomis/src/splash1.png")); //Edit image path first
+	        BufferedImage nomisSplash = ImageIO.read(new File("resources/images/main.png")); //Edit image path first
 	        JLabel picLabel = new JLabel(new ImageIcon(nomisSplash));
 	        mid.add(picLabel);
 	        mainPanel.add(mid);
