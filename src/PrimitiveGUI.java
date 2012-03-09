@@ -80,8 +80,8 @@ public class PrimitiveGUI extends JFrame
 	        JButton about = new JButton("About");
 	        about.addActionListener(new ActionListener() {
 	        	public void actionPerformed(ActionEvent event) {
-	        		AboutDialog ad = new AboutDialog();
-                    ad.setVisible(true);
+	        		//AboutDialog ad = new AboutDialog();
+                   // ad.setVisible(true);
 	        	}
 	        });
 	        JButton exit = new JButton("Exit");

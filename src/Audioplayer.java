@@ -1,4 +1,6 @@
 import java.io.*;
+
+import javax.lang.model.element.NestingKind;
 import javax.sound.sampled.*;
 import javax.swing.*;
    
@@ -17,14 +19,21 @@ public class Audioplayer extends JFrame {
       
       try {
          // Open an audio input stream.
-    	  File soundFile = new File("C:/Users/Victor Ng/workspace/Inf-1 OOP project/Music/85046_newgrounds_parago.wav");
+    	  //File soundFile = new File("C:/Users/Victor Ng/workspace/Inf-1 OOP project/Music/85046_newgrounds_parago.wav");
+    	  File soundFile = new File("music/scifi002.wav");
+    	  
     	  AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
          // Get a sound clip resource.
          Clip clip = AudioSystem.getClip();
          // Open audio clip and load samples from the audio input stream.
-         clip.open(audioIn);
-         clip.start();
-         clip.loop(Clip.LOOP_CONTINUOUSLY);  // repeat forever
+         //clip.open(audioIn);
+         //clip.start();
+         //clip.loop(Clip.LOOP_CONTINUOUSLY);  // repeat forever
+         
+         SoundEffect newSound = SoundEffect.BUTTON1;
+         newSound.play();
+         
+         
       } catch (UnsupportedAudioFileException e) {
          e.printStackTrace();
       } catch (IOException e) {
@@ -36,6 +45,7 @@ public class Audioplayer extends JFrame {
    
    public static void main(String[] args) {
       Audioplayer a = new Audioplayer ();
+      
 
    }
 }
