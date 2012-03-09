@@ -17,14 +17,14 @@ public class Audioplayer extends JFrame {
    
       // TODO Use relative path when refering to resources, as this project needs to be able to be implemented on any machine
       
-      try {
+     // try {
          // Open an audio input stream.
     	  //File soundFile = new File("C:/Users/Victor Ng/workspace/Inf-1 OOP project/Music/85046_newgrounds_parago.wav");
-    	  File soundFile = new File("music/scifi002.wav");
+    	 // File soundFile = new File("music/scifi002.wav");
     	  
-    	  AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
+    	 // AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
          // Get a sound clip resource.
-         Clip clip = AudioSystem.getClip();
+        // Clip clip = AudioSystem.getClip();
          // Open audio clip and load samples from the audio input stream.
          //clip.open(audioIn);
          //clip.start();
@@ -33,7 +33,7 @@ public class Audioplayer extends JFrame {
          SoundEffect newSound = SoundEffect.BUTTON1;
          newSound.play();
          
-         
+       /*  
       } catch (UnsupportedAudioFileException e) {
          e.printStackTrace();
       } catch (IOException e) {
@@ -41,6 +41,8 @@ public class Audioplayer extends JFrame {
       } catch (LineUnavailableException e) {
          e.printStackTrace();
       }
+      
+      */
    }
    
    public static void main(String[] args) {
